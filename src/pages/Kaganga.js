@@ -13,9 +13,7 @@ function KagangaPage() {
     try {
       const response = await fetch(
         `https://bouncy-earthy-radish.glitch.me/api/searchKaganga?value=${searchTerm}`,
-        {
-          mode: "no-cors",
-        }
+        {}
       );
       const data = await response.json();
       setSearchResults(data.data);
