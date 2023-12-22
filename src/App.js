@@ -93,7 +93,9 @@ function App() {
   useEffect(() => {
     const fetchMode = async () => {
       try {
-        const response = await fetch("http://localhost:5050/api/");
+        const response = await fetch("http://localhost:5050/api/", {
+          mode: "no-cors",
+        });
         const data = await response.json();
         setModeText(data.data[0].textBahasa);
       } catch (error) {
@@ -108,7 +110,11 @@ function App() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5050/api/search?value=${searchTerm}`
+        `http://localhost:5050/api/search?value=${searchTerm}`,
+
+        {
+          mode: "no-cors",
+        }
       );
       const data = await response.json();
       setSearchResults(data.data);
@@ -121,6 +127,7 @@ function App() {
   const handleModeChange = async () => {
     try {
       const response = await fetch("http://localhost:5050/api/ganti", {
+        mode: "no-cors",
         method: "POST",
       });
       const data = await response.json();
