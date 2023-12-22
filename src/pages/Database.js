@@ -19,7 +19,9 @@ function Database() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5050/api/database");
+        const response = await fetch(
+          "https://bouncy-earthy-radish.glitch.me/api/database"
+        );
         const result = await response.json();
         setData(result.data);
       } catch (error) {
@@ -43,7 +45,7 @@ function Database() {
     <div className="container mt-4">
       <form
         className="card p-3 text-center"
-        action="http://localhost:5050/api/post-database"
+        action="https://bouncy-earthy-radish.glitch.me/api/post-database"
         method="post"
         id="popup">
         <h2>Tambahkan Kata yang Tidak Ada!</h2>
@@ -111,7 +113,7 @@ function Database() {
                   <div className="modal-body">
                     {/* Edit form goes here */}
                     <form
-                      action={`https://localhost:5050/api/edit/${element.id}`}
+                      action={`https://bouncy-earthy-radish.glitch.me/api/edit/${element.id}`}
                       method="post"
                       id={`editForm${index}`}
                       style={{ color: "black" }}>
