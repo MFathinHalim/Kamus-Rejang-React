@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: rlabel;
+  src: url(bangkahulu.ttf);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #dd5f54;
+  --secondary-color: #b5483f;
+  --accent-color: #e2766c;
+  --highlight-color: #e90709;
+  --dark-color: #ba4541;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background-color: var(--primary-color);
+}
+.playstore-icon {
+  height: 24px; /* Adjust the height as needed */
+  width: auto;
+  margin-right: 8px; /* Add some spacing between the icon and text */
+}
+@media (max-width: 576px) {
+  .center-heading {
+    font-size: 24px;
   }
 }
+.custom-card {
+  max-width: 200px;
+  margin: 0 auto;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-card img {
+  height: auto;
+  max-height: 200px;
+  width: auto;
+  max-width: 200px;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.custom-form input {
+  width: 100%;
+}
+
+.centered-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+.navbar {
+  background-color: var(--secondary-color);
+}
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+main.container {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.modal-body,
+.modal-footer,
+.modal-content,
+label {
+  background-color: #b5483f;
+  color: white !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--secondary-color);
+}
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.btn-primary:active {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+}
+.card {
+  background-color: var(--dark-color);
+  color: white;
+}
+.center-heading {
+  text-align: center;
 }
