@@ -95,9 +95,7 @@ function App() {
       try {
         const response = await fetch(
           "https://bouncy-earthy-radish.glitch.me/api/",
-          {
-            mode: "no-cors",
-          }
+          {}
         );
         const data = await response.json();
         setModeText(data.data[0].textBahasa);
@@ -113,10 +111,7 @@ function App() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://bouncy-earthy-radish.glitch.me/api/search?value=${searchTerm}`,
-        {
-          mode: "no-cors",
-        }
+        `https://bouncy-earthy-radish.glitch.me/api/search?value=${searchTerm}`
       );
       const data = await response.json();
       setSearchResults(data.data);
@@ -131,7 +126,6 @@ function App() {
       const response = await fetch(
         "https://bouncy-earthy-radish.glitch.me/api/ganti",
         {
-          mode: "no-cors",
           method: "POST",
         }
       );
