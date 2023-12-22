@@ -93,7 +93,7 @@ function App() {
   useEffect(() => {
     const fetchMode = async () => {
       try {
-        const response = await fetch("http://localhost:5050/api/", {
+        const response = await fetch("http://10.10.2.101:5050/api/", {
           mode: "no-cors",
         });
         const data = await response.json();
@@ -110,7 +110,7 @@ function App() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5050/api/search?value=${searchTerm}`,
+        `http://10.10.2.101:5050/api/search?value=${searchTerm}`,
 
         {
           mode: "no-cors",
@@ -126,7 +126,7 @@ function App() {
 
   const handleModeChange = async () => {
     try {
-      const response = await fetch("http://localhost:5050/api/ganti", {
+      const response = await fetch("http://10.10.2.101:5050/api/ganti", {
         mode: "no-cors",
         method: "POST",
       });
