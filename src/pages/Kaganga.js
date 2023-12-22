@@ -12,7 +12,7 @@ function KagangaPage() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5050/api/searchKaganga?value=${searchTerm}`
+        `https://bouncy-earthy-radish.glitch.me/api/searchKaganga?value=${searchTerm}`
       );
       const data = await response.json();
       setSearchResults(data.data);
