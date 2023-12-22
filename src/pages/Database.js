@@ -20,7 +20,10 @@ function Database() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://bouncy-earthy-radish.glitch.me/api/database"
+          "https://bouncy-earthy-radish.glitch.me/api/database",
+          {
+            mode: "no-cors",
+          }
         );
         const result = await response.json();
         setData(result.data);
